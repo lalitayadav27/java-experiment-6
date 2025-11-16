@@ -1,0 +1,46 @@
+
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating...");
+    }
+}
+
+
+interface Pet {
+    void beFriendly();
+}
+
+
+interface Trainable {
+    void train();
+}
+
+class Dog extends Animal implements Pet, Trainable {
+    @Override
+    public void beFriendly() {
+        System.out.println("Dog is friendly and loyal.");
+    }
+
+    @Override
+    public void train() {
+        System.out.println("Dog can be trained to follow commands.");
+    }
+
+    void bark() {
+        System.out.println("Dog is barking!");
+    }
+}
+
+public class MultiInheritanceDemo {
+    public static void main(String[] args) {
+System.out.println("Name: Lalita yadav");
+        System.out.println("Roll No.: 24csu28");
+        System.out.println("----------------------");
+
+        Dog d = new Dog();
+        d.eat();         // From Animal
+        d.beFriendly();  // From Pet interface
+        d.train();       // From Trainable interface
+        d.bark();        // From Dog
+    }
+}
