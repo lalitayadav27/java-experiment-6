@@ -1,0 +1,50 @@
+abstract class Bank {
+    abstract void getBalance();  // Abstract method (no body)
+}
+
+
+class BankA extends Bank {
+    private int balance = 100;
+
+    @Override
+    void getBalance() {
+        System.out.println("Balance in Bank A: $" + balance);
+    }
+}
+
+
+class BankB extends Bank {
+    private int balance = 150;
+
+    @Override
+    void getBalance() {
+        System.out.println("Balance in Bank B: $" + balance);
+    }
+}
+
+
+class BankC extends Bank {
+    private int balance = 200;
+
+    @Override
+    void getBalance() {
+        System.out.println("Balance in Bank C: $" + balance);
+    }
+}
+
+
+public class BankDemo {
+    public static void main(String[] args) {
+System.out.println("Name: Lalita yadav");
+        System.out.println("Roll No.: 24csu28");
+        System.out.println("----------------------");
+
+        BankA a = new BankA();
+        BankB b = new BankB();
+        BankC c = new BankC();
+
+        a.getBalance();
+        b.getBalance();
+        c.getBalance();
+    }
+}
