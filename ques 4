@@ -1,0 +1,46 @@
+
+abstract class Shape {
+  
+    abstract void RectangleArea(double length, double breadth);
+    abstract void SquareArea(double side);
+    abstract void CircleArea(double radius);
+}
+
+
+class Area extends Shape {
+    
+    @Override
+    void RectangleArea(double length, double breadth) {
+        double area = length * breadth;
+        System.out.println("Area of Rectangle = " + area);
+    }
+
+    
+    @Override
+    void SquareArea(double side) {
+        double area = side * side;
+        System.out.println("Area of Square = " + area);
+    }
+
+    
+    @Override
+    void CircleArea(double radius) {
+        double area = Math.PI * radius * radius;
+        System.out.println("Area of Circle = " + area);
+    }
+}
+
+
+public class ShapeDemo {
+    public static void main(String[] args) {
+System.out.println("Name: Lalita yadav");
+        System.out.println("Roll No.: 24csu28");
+        System.out.println("----------------------");
+
+        Area a = new Area();  
+
+        a.RectangleArea(10, 5);
+        a.SquareArea(6);
+        a.CircleArea(7);
+    }
+}
